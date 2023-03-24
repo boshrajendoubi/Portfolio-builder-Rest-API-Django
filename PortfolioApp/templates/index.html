@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO </title>
+    <!-- custom css file link  -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+</head>
+
+<body>
+<div class="header">
+
+    <a href="#" class="logo">
+        <img src="{% static 'logo - Copie.png' %}" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href="{% url 'PortfolioApp:index' %}">Home</a>
+        <a href=""class='nav'>contact Me </a>
+        <a href="" class="signup">sign up</a>
+    </nav>
+</div>
+<div class="Presentation ">
+    <div class="profil">
+    <H1>Hi ! I am  {{ name }}  {{familyName}}</H1>
+    <h2>a BI Consultant </h2>
+    <div class="descr">
+        <p>{{ Description }} </p>
+    </div>
+    <div class="icon">
+        <img src="{% static 'iconflech.png' %}">
+    </div>
+    </div>
+    <div class="Photo">
+    <img src="{{photo.url}}" alt="">
+    </div>
+</div>
+<section class="cards" id="services">
+    <h2 class="title">skills</h2>
+    <div class="content">
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-edit"></i>
+            </div>
+            <div class="info">
+                <h3>Script Writing</h3>
+                <p>Research and write scripts for different topics that can then be directly recorded for video production</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-video"></i>
+            </div>
+            <div class="info">
+                <h3>Video Production</h3>
+                <p>Record and shoot videos taking into consideration proper settings, followed by production & post-production work</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="info">
+                <h3>Curriculum Development</h3>
+                <p>Develop complete curriculums for various technical topics to produce digital transformative courses</p>
+            </div>
+        </div>
+    </div>
+</section>
+<button><a href="delete/{{idPersonne}}">delete</a></button>
+<button><a href="update/{{idPersonne}}">Edit</a></button>
+</body>
+
+

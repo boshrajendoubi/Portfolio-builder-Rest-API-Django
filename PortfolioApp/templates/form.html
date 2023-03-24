@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build your portfolio </title>
+    <!-- custom css file link  -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'formstyle.css' %}">
+    
+</head>
+<body>
+	<h1>Ajouter un utilisateur </h1>
+<!--
+<form action="addrecord/" method="post">
+{% csrf_token %}
+First Name:<br>
+<input name="name">
+<br><br>
+Last Name:<br>
+<input name="familyName">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</html>-->
+
+<div class="forms">
+  <div class="description">
+    <div class="titl">
+        <img class="rect" src="./rectangle260.png">
+    <div class="titles">
+       <h1>Build Your Portfolio</h1>
+       <h2>Formulaire</h2>
+    </div>
+    </div>
+
+    <div class="icon">
+        <img src="./iconflech.png">
+    </div>
+  </div>
+  <div class="Formulaire">
+    <div class="categ">
+        <div class="c1">
+         <button type="button" class="b1">1</button>
+         <h5>Personal Infomations</h5>
+        </div>
+        <div class="c2">
+         <button type="button" class="b2">2</button>
+         <h5>Education Career</h5>
+        </div>
+        <div class="c3">
+         <button type="button" class="b3">3</button>
+         <h5>Professional Career</h5>
+        </div>
+        </div>
+   <div class="formelement">
+    <form action="addrecord/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+        <div class="div1">
+        <div class="span">
+        <span>Family name</span>
+        <input name="name">
+        </div>
+        <div class="span" id="spaces">
+        <span>name</span>
+        <input name="familyName">
+        </div>
+        <div class="span" id="spaces">
+            <span>Email</span>
+            <input type="email" id="inp1" name="mail" required>
+            </div>
+        </div>
+        <div class="div2">
+        <div class="span">
+        <span>Career Summary</span>
+        <input type="text"required name="CareerSammary"></div>
+        <div class="span" id="spaces">
+        <span>Attach your Photo  </span>
+        <input type="file" name="photo"></div>
+        </div>
+        <div class="div4">
+        <div class="btn1" id="spaces"><button class="button" href="#" >Suivant</button></div>
+       </div>
+    </form>
+   </div>
+  </div>
+</div>
+</body>
+<div class="contact-me">
+<div class="centerbutton">
+<button class="button-two" href="#" type="submit" value="Submit">Envoyez</button>
+</div>
+</div>

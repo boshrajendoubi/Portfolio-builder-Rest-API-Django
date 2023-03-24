@@ -1,0 +1,52 @@
+{% block content %} 
+
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign In </title>
+    <!-- custom css file link  -->
+	{% load static %}
+    <link rel="stylesheet" href="{% static 'loginstyle.css' %}">
+</head>
+<body>
+	<div class="header">
+
+		<a href="#" class="logo">
+			<img src="./logo - Copie.png" alt="">
+		</a>
+	
+		<nav class="navbar">
+			<a href=""class='nav'>Home</a>
+			<a href=""class='nav'>contact Me </a>
+			<a href="" class="signup">sign up</a>
+		</nav>
+	</div>
+	 
+
+
+
+		<form  method="POST" action="#">
+			{% load crispy_forms_tags %}
+			{% csrf_token %}
+			{{ register_form|crispy }}     
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="facebook"><img src="{% static 'icons8-facebook-48.png' %}"alt=""></i></a>
+				<a href="#" class="social"><i class="gmail"><img src="{% static 'icons8-gmail-48.png'%}"alt=""></i></a>
+			</div>
+			<span>or use your account</span>
+			<button class="button-two" href="{% url 'PortfolioApp:index' %}" type="submit" value="Submit">Sign In</button>
+		</form>
+	
+	
+		
+
+</div>
+</body>
+
+{% endblock %}
+</html>
